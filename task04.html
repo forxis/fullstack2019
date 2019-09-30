@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Notes webpage loading diagram</title>
+</head>
+<body>
+    <div id="container">
+   <div class="main"> When you open up browser it sends request to server &rarr; HTTP GET https://fullstack-exampleapp.herokuapp.com/notes</div>
+   <div class="arrow">&darr;</div>
+    <div class="main">While loading HTML browser requests CSS file as well so it sends another request to server &rarr; HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css </div>
+    <div class="arrow">&darr;</div>
+    <div class="main">After loading CSS file browser sends another request to server to load JS &rarr; HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js </div>
+    <div class="arrow">&darr;</div>
+    <div class="main">When a user leaves a note on the browser, browser starts executing JS code </div>
+    <div class="arrow">&darr;</div>
+    <div class="main">Browser requests JSON data from server by sending request &rarr; HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json </div>
+    <div class="arrow">&darr;</div>
+    <div class="main"> Server sends to browser the content of the data.json file with the added value 	&rarr;  [{ content: "HTML is easy", date: "2019-05-23" }, ...] </div>
+    <div class="arrow">&darr;</div>
+    <div class="main">Browser loads event handler function that displays all the notes values from data.json </div>
+
+</div>
+</body>
+</html>
